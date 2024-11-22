@@ -22,7 +22,9 @@ function App() {
   useEffect(() => {
     const fetchApples = async () => {
       try {
-        const getApple = await fetch("http://localhost:2025/apples");
+        const getApple = await fetch(
+          "https://apples-backend.onrender.com/apples"
+        );
         const hasApples = await getApple.json();
         // console.log(hasApples);
         setApples(hasApples);
